@@ -10,6 +10,6 @@ ConVIT_training_file.py this is to train your model, but some of hyperparameters
 
 ConVIT_work_AI.py basically, after the training, with the updated weights, this file can run well to predict/descirbe the image.
 
-All the files can you run directly, some example random matrix was fabracated as the input data to make sure the code can run, at least.
+All the files can run directly, some example random matrix was fabracated as the input data to make sure the code can run, at least.
 
 Have fun.
