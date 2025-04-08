@@ -19,7 +19,7 @@ class ConViT(nn.Module):
         x = self.embed(x)
         x = self.transformer(x)
         x = x.mean(dim=1)  # global average pooling
-        return self.classifier(x)
+        return torch.nn.functional.softmax(self.classifier(x), dim=1) #Softmax here
 
 class ConvBlock(nn.Module):
     def __init__(self, in_channels=1, out_channels=1, kernel_size=3, pool_size=2):
