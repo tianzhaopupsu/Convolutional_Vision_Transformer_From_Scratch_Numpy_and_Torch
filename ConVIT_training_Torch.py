@@ -100,13 +100,13 @@ optimizer = optim.Adam(model.parameters(), lr=1e-4)
 loss_fn = nn.CrossEntropyLoss()
 num_epochs=5
 
-images = torch.randn(10, 1, 16, 16)  # Example data: 64 images of size 1x16x16
-labels = torch.randint(0, 3, (10,))  # Example labels: 64 labels between 0 and 9
+images = torch.randn(10, 1, 16, 16)  # Example data: 10 images of size 1x16x16
+labels = torch.randint(0, 3, (10,))  # Example labels: 10 labels between 0 and 2
 # Create a TensorDataset
 dataset = TensorDataset(images, labels)
 
 # Create a DataLoader
-dataloader = DataLoader(dataset, batch_size=32, shuffle=True) 
+dataloader = DataLoader(dataset, batch_size=10, shuffle=True) 
 
 # Training loop
 for epoch in range(num_epochs):
@@ -118,7 +118,7 @@ for epoch in range(num_epochs):
 
         # Forward pass
         outputs = model(images)
-
+        
         # Compute loss
         loss = loss_fn(outputs, labels)
         total_loss += loss.item()
@@ -129,3 +129,4 @@ for epoch in range(num_epochs):
         optimizer.step()
 
     print(f"Epoch {epoch+1}, Loss: {total_loss:.4f}")
+    print(labels)
