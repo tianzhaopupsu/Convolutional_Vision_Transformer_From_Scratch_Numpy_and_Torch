@@ -1,4 +1,4 @@
-# Convolutional_Vision_Transformer_Numpy_Only_From_Scratch
+# Convolutional_Vision_Transformer_From_Scratch_Numpy_and_Torch
 
 This is to share the Python file to build a Convolutional Vision Transformer from scratch. The purpose of the Numpy-only is to show the important steps that might not be seen by using Pytorch or other packages.
 
